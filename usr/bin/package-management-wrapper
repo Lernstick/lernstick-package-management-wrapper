@@ -1,0 +1,40 @@
+#!/bin/bash
+
+# support for i18n and L10n
+. gettext.sh
+export TEXTDOMAIN=package-management-wrapper
+
+# gracefully stop unattended upgrades
+(
+while pgrep -f /usr/bin/unattended-upgrade > /dev/null
+do
+	sudo /usr/share/unattended-upgrades/unattended-upgrade-shutdown
+	sleep 3
+done
+) |
+zenity \
+	--progress \
+	--pulsate \
+	--auto-close \
+	--title="$(gettext "Please wait")" \
+	--text="$(gettext "Finishing unattended upgrades...")"
+
+# upgrade package information
+(
+sudo apt-get update
+) |
+zenity \
+	--progress \
+	--pulsate \
+	--auto-close \
+	--title="$(gettext "Please wait")" \
+	--text="$(gettext "Updating package information...")"
+
+# repair dpkg if needed
+if [ "${PIPESTATUS[0]}" != "0" ]
+then
+	xterm -e 'sudo dpkg --configure -a'
+fi
+
+# start wrapped program
+$1

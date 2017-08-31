@@ -1,0 +1,17 @@
+Initialisierung
+---------------
+mkdir -p po/de
+xgettext -L Shell --add-comments=## usr/bin/package-management-wrapper
+vi messages.po #header richtig füllen
+cp messages.po po/de/package-management-wrapper.po
+vi po/de/package-management-wrapper.po # erste Übersetzung
+cd po; for i in *; do cd $i; msgfmt -o package-management-wrapper.mo package-management-wrapper.po; cd ..; done; cd ..
+cd po; for i in *; do cd $i; MDIR="../../usr/share/locale/$i/LC_MESSAGES/"; mkdir -p ${MDIR}; rm -f ${MDIR}/package-management-wrapper.mo; cp package-management-wrapper.mo ${MDIR}; cd ..; done; cd ..
+
+Update:
+-------
+xgettext -L Shell --add-comments=## usr/bin/package-management-wrapper
+cd po; for i in *; do cd $i; msgmerge -U package-management-wrapper.po ../../messages.po; cd ..; done; cd ..
+vi po/*/package-management-wrapper.po
+cd po; for i in *; do cd $i; msgfmt -o package-management-wrapper.mo package-management-wrapper.po; cd ..; done; cd ..
+cd po; for i in *; do cd $i; MDIR="../../usr/share/locale/$i/LC_MESSAGES/"; mkdir -p ${MDIR}; rm -f ${MDIR}/package-management-wrapper.mo; cp package-management-wrapper.mo ${MDIR}; cd ..; done; cd ..

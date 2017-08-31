@@ -16,6 +16,7 @@ zenity \
 	--progress \
 	--pulsate \
 	--auto-close \
+	--no-cancel \
 	--title="$(gettext "Please wait")" \
 	--text="$(gettext "Finishing unattended upgrades...")"
 
@@ -27,6 +28,7 @@ zenity \
 	--progress \
 	--pulsate \
 	--auto-close \
+	--no-cancel \
 	--title="$(gettext "Please wait")" \
 	--text="$(gettext "Updating package information...")"
 

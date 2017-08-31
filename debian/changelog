@@ -1,3 +1,10 @@
+lernstick-package-management-wrapper (2) lernstick-8; urgency=medium
+
+  * [cadc61] use --no-cancel option in zenity dialogs
+  * [7c9010] added .gitignore file
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Thu, 31 Aug 2017 16:50:22 +0200
+
 lernstick-package-management-wrapper (1) lernstick-8; urgency=low
 
   * initial release

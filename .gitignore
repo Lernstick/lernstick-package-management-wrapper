@@ -1,0 +1,6 @@
+build-stamp
+configure-stamp
+debian/files
+debian/lernstick-package-management-wrapper.debhelper.log
+debian/lernstick-package-management-wrapper.substvars
+debian/lernstick-package-management-wrapper/

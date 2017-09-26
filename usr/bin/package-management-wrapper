@@ -8,7 +8,7 @@ export TEXTDOMAIN=package-management-wrapper
 (
 while pgrep -f /usr/bin/unattended-upgrade > /dev/null
 do
-	sudo /usr/share/unattended-upgrades/unattended-upgrade-shutdown
+	/usr/share/unattended-upgrades/unattended-upgrade-shutdown
 	sleep 3
 done
 ) |
@@ -22,7 +22,7 @@ zenity \
 
 # upgrade package information
 (
-sudo apt-get update
+apt-get update
 ) |
 zenity \
 	--progress \
@@ -35,7 +35,7 @@ zenity \
 # repair dpkg if needed
 if [ "${PIPESTATUS[0]}" != "0" ]
 then
-	xterm -e 'sudo dpkg --configure -a'
+	xterm -e 'dpkg --configure -a'
 fi
 
 # start wrapped program

@@ -39,4 +39,4 @@ then
 fi
 
 # start wrapped program
-$1
+$@

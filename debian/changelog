@@ -1,3 +1,9 @@
+lernstick-package-management-wrapper (4) lernstick-8; urgency=medium
+
+  * [c18cf2] start the wrapped program including all arguments
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Fri, 06 Oct 2017 16:24:41 +0200
+
 lernstick-package-management-wrapper (3) lernstick-8; urgency=medium
 
   * [c60030] no longer use sudo internally (script must now be called via pkexec)

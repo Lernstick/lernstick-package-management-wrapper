@@ -7,7 +7,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: 0.9 VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2017-08-31 16:05+0200\n"
+"POT-Creation-Date: 2017-10-12 16:24+0200\n"
 "PO-Revision-Date: 2017-08-31 16:07+0200\n"
 "Last-Translator: Ronny Standtke <ronny.standtke@gmx.net>\n"
 "Language-Team: German <de@li.org>\n"
@@ -16,14 +16,33 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: usr/bin/package-management-wrapper:19 usr/bin/package-management-wrapper:30
+#: usr/bin/package-management-wrapper:10
+msgid ""
+"A working internet connection is needed to install or upgrade software "
+"packages.\\nUnfortunately, the connection to the Internet failed.\\nPlease "
+"make sure that your ethernet or wireless connection is correctly set up."
+msgstr ""
+"Für die Installation oder Aktualisierung von Softwarepaketen wird eine "
+"funktionierende Internetverbindung benötigt.\\nLeider ist die Verbindung ins "
+"Internet fehlgeschlagen.\\nBitte stellen Sie sicher, dass die Verbindung über "
+"Ethernet oder WLAN korrekt eingerichtet ist."
+
+#: usr/bin/package-management-wrapper:13
+msgid ""
+"In addition to that you should also temporarily disable the firewall in the"
+"\\nLernstick Welcome application."
+msgstr ""
+"Des Weiteren sollten Sie die Firewall im Lernstick-Willkommensprogramm "
+"temporär deaktivieren."
+
+#: usr/bin/package-management-wrapper:32 usr/bin/package-management-wrapper:44
 msgid "Please wait"
 msgstr "Bitte warten"
 
-#: usr/bin/package-management-wrapper:20
+#: usr/bin/package-management-wrapper:33
 msgid "Finishing unattended upgrades..."
 msgstr "Automatische Updates werden beendet..."
 
-#: usr/bin/package-management-wrapper:31
+#: usr/bin/package-management-wrapper:45
 msgid "Updating package information..."
 msgstr "Paketinformationen werden aktualisiert..."

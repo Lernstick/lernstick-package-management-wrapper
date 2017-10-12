@@ -4,6 +4,18 @@
 . gettext.sh
 export TEXTDOMAIN=package-management-wrapper
 
+# check online status
+if ! wget --spider http://ftp.ch.debian.org
+then
+	ERROR_MESSAGE="$(gettext "A working internet connection is needed to install or upgrade software packages.\nUnfortunately, the connection to the Internet failed.\nPlease make sure that your ethernet or wireless connection is correctly set up.")"
+	if systemctl status lernstick-firewall > /dev/null
+	then
+		ERROR_MESSAGE="${ERROR_MESSAGE}\n$(gettext "In addition to that you should also temporarily disable the firewall in the\nLernstick Welcome application.")"
+	fi
+	zenity --error --text="${ERROR_MESSAGE}"
+        exit 0
+fi
+
 # gracefully stop unattended upgrades
 (
 while pgrep -f /usr/bin/unattended-upgrade > /dev/null

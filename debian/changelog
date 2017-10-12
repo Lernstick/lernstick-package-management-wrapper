@@ -1,3 +1,10 @@
+lernstick-package-management-wrapper (5) lernstick-8; urgency=medium
+
+  * [43e138] updated .gitingore file
+  * [cbe5f9] added online status check
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Thu, 12 Oct 2017 16:37:52 +0200
+
 lernstick-package-management-wrapper (4) lernstick-8; urgency=medium
 
   * [c18cf2] start the wrapped program including all arguments

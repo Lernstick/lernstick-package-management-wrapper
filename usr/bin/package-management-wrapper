@@ -12,7 +12,9 @@ then
 	then
 		ERROR_MESSAGE="${ERROR_MESSAGE}\n$(gettext "In addition to that you should also temporarily disable the firewall in the\nLernstick Welcome application.")"
 	fi
-	zenity --error --text="${ERROR_MESSAGE}"
+	# TODO: remove --no-wrap option once zenity is fixed, see
+	# https://bugs.launchpad.net/ubuntu/+source/zenity/+bug/1206760
+	zenity --no-wrap --error --text="${ERROR_MESSAGE}"
         exit 0
 fi
 

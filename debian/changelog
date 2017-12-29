@@ -1,3 +1,10 @@
+lernstick-package-management-wrapper (6) lernstick-9; urgency=medium
+
+  * [5086c4] added "--no-wrap" option to zenity as a workaround for bug
+    https://bugs.launchpad.net/ubuntu/+source/zenity/+bug/1206760
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Fri, 29 Dec 2017 10:11:48 +0100
+
 lernstick-package-management-wrapper (5) lernstick-8; urgency=medium
 
   * [43e138] updated .gitingore file

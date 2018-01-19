@@ -5,7 +5,7 @@
 export TEXTDOMAIN=package-management-wrapper
 
 # check online status
-if ! wget --spider http://ftp.ch.debian.org
+if ! wget --spider http://httpredir.debian.org
 then
 	WARNING_MESSAGE="$(gettext "A working internet connection is needed to install or upgrade software packages.\nUnfortunately, the connection to the Internet failed.\nPlease make sure that your ethernet or wireless connection is correctly set up.")"
 	if systemctl status lernstick-firewall > /dev/null

@@ -1,3 +1,12 @@
+lernstick-package-management-wrapper (7) lernstick-9; urgency=medium
+
+  * show warning message and continue when connection to internet failed
+    instead of an error message and exit
+  * use httpredir.debian.org instead of ftp.ch.debian.org for checking internet
+    connectivity
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Fri, 19 Jan 2018 19:19:13 +0100
+
 lernstick-package-management-wrapper (6) lernstick-9; urgency=medium
 
   * [5086c4] added "--no-wrap" option to zenity as a workaround for bug

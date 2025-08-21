@@ -1,3 +1,9 @@
+lernstick-package-management-wrapper (8) lernstick-13; urgency=medium
+
+  * [06f620] updated for Debian 13
+
+ -- Ronny Standtke <ronny.standtke@gmx.net>  Thu, 21 Aug 2025 23:09:37 +0200
+
 lernstick-package-management-wrapper (7) lernstick-9; urgency=medium
 
   * show warning message and continue when connection to internet failed

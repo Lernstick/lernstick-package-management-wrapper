@@ -4,6 +4,10 @@
 . gettext.sh
 export TEXTDOMAIN=package-management-wrapper
 
+# TODO: this is only a workaround for a bug in Debian 13, see here:
+# https://gitlab.tails.boum.org/tails/tails/-/merge_requests/2309
+export GSK_RENDERER=cairo
+
 # check online status
 if ! wget --spider http://httpredir.debian.org
 then

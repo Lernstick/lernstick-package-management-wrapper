@@ -1,5 +1,7 @@
 build-stamp
 configure-stamp
+debian/.debhelper/
+debian/debhelper-build-stamp
 debian/files
 debian/lernstick-package-management-wrapper/
 debian/lernstick-package-management-wrapper.debhelper.log
